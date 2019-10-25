@@ -1,19 +1,22 @@
 @charset "UTF-8";
-/*no Saas, as varáveis iniciam com $*/
+/**
+  * No Sass, as variáveis
+  * iniciam com $
+  */
 @font-face {
   font-family: "decorativa";
-  src: url(../fonts/Satisfy-Regular.ttf);
+  src: url(../fonts/Pacifico-Regular.ttf);
 }
 @font-face {
   font-family: "padrao";
-  src: url(../fonts/Muli-Regular.ttf);
+  src: url(../fonts/Raleway-Regular.ttf);
 }
 body {
   margin: 0;
 }
 
 #header {
-  background-color: #428bc7;
+  background-color: #f1a9a0;
   padding: 10px 20px;
   margin-bottom: 10px;
 }
@@ -22,51 +25,94 @@ body {
   vertical-align: middle;
 }
 #header img {
-  width: 80px;
+  width: 70px;
   margin-right: 20px;
 }
 #header h1 {
   font-family: "decorativa";
   color: white;
-  text-shadow: 2px 2px #555;
+  text-shadow: 2px 2px #555555;
 }
 
 #formularioContato {
   padding: 10px;
-  border: 1px solid #5cc1d8;
+  border: 1px solid #ffcb05;
   width: 95%;
   margin: auto;
 }
-#formularioContato label, #formularioContato input {
+#formularioContato label,
+#formularioContato input {
   display: block;
   font-family: "padrao";
 }
 #formularioContato input {
   margin-bottom: 10px;
-  height: 25px;
+  height: 20px;
   font-size: 100%;
-  /*Opcional*/
+  /* Daqui pra baixo é opcional */
   border-radius: 5px;
   border: 1px solid #aaaaaa;
   padding-left: 5px;
 }
-#formularioContato input[type=text], #formularioContato input[type=email] {
+#formularioContato input[type=text] {
   width: 300px;
 }
 #formularioContato input[type=tel] {
-  width: 150px;
+  width: 140px;
 }
-#formularioContato input[type=date] {
-  width: 150px;
+#formularioContato input[type=email] {
+  width: 200px;
 }
 #formularioContato input[type=submit] {
   padding: 10px 20px;
-  /* none não funciona, inherit é o comportamento 
-  padrão de altura dos componentes externos (form nesse caso)*/
+  /* Anula a altura padrão */
   height: inherit;
-  background-color: #2574a9;
-  border: none;
+  background-color: #f1a9a0;
   color: white;
+  border: none;
+}
+
+#listagemContatos {
+  margin-top: 20px;
+}
+#listagemContatos table {
+  border-collapse: collapse;
+  margin: 0px auto 50px auto;
+  width: 95%;
+  font-family: "padrao";
+}
+#listagemContatos table thead {
+  background-color: #f1a9a0;
+  color: white;
+}
+#listagemContatos table tr:hover td {
+  background-color: #eeeeee;
+  font-size: 91%;
+}
+#listagemContatos table tr:nth-child(even) {
+  background-color: #c8f7c5;
+}
+#listagemContatos table tr td {
+  font-size: 90%;
+}
+#listagemContatos table tr th, #listagemContatos table tr td {
+  text-align: center;
+  border: 1px solid #ffcb05;
+  padding: 5px 0px;
+  /*Regra especifica para a primeira coluna*/
+  /* para regra específica para coluna que quiser escolher
+  &:nth-child(3){
+      text-align: left;
+  }*/
+  /*Regra especifica para a última coluna*/
+}
+#listagemContatos table tr th:first-child, #listagemContatos table tr td:first-child {
+  text-align: left;
+  padding-left: 5px;
+}
+#listagemContatos table tr th:last-child, #listagemContatos table tr td:last-child {
+  text-align: right;
+  padding: 0px 5px;
 }
 
 /*# sourceMappingURL=estilos.css.map */
