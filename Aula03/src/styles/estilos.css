@@ -5,7 +5,7 @@
   */
 @font-face {
   font-family: "decorativa";
-  src: url(../fonts/Pacifico-Regular.ttf);
+  src: url(../fonts/pacifico-regular.ttf);
 }
 @font-face {
   font-family: "padrao";
@@ -72,30 +72,30 @@ body {
   border: none;
 }
 
-#listagemContatos {
+#tabelaContatos {
   margin-top: 20px;
 }
-#listagemContatos table {
+#tabelaContatos table {
   border-collapse: collapse;
   margin: 0px auto 50px auto;
   width: 95%;
   font-family: "padrao";
 }
-#listagemContatos table thead {
+#tabelaContatos table thead {
   background-color: #f1a9a0;
   color: white;
 }
-#listagemContatos table tr:hover td {
+#tabelaContatos table tr:hover td {
   background-color: #eeeeee;
   font-size: 91%;
 }
-#listagemContatos table tr:nth-child(even) {
+#tabelaContatos table tr:nth-child(even) {
   background-color: #c8f7c5;
 }
-#listagemContatos table tr td {
+#tabelaContatos table tr td {
   font-size: 90%;
 }
-#listagemContatos table tr th, #listagemContatos table tr td {
+#tabelaContatos table tr th, #tabelaContatos table tr td {
   text-align: center;
   border: 1px solid #ffcb05;
   padding: 5px 0px;
@@ -106,13 +106,65 @@ body {
   }*/
   /*Regra especifica para a última coluna*/
 }
-#listagemContatos table tr th:first-child, #listagemContatos table tr td:first-child {
+#tabelaContatos table tr th:first-child, #tabelaContatos table tr td:first-child {
   text-align: left;
   padding-left: 5px;
 }
-#listagemContatos table tr th:last-child, #listagemContatos table tr td:last-child {
+#tabelaContatos table tr th:last-child, #tabelaContatos table tr td:last-child {
   text-align: right;
   padding: 0px 5px;
+}
+
+#cardsContatos {
+  display: none;
+  padding: 5px 0px;
+}
+#cardsContatos div {
+  border: 1px solid #ffcb05;
+  box-shadow: 3px 3px 3px #ffcb05;
+  margin: 0px auto 10px auto;
+  width: 86%;
+  border-radius: 5px;
+  padding: 13px 7px 7px 7px;
+}
+#cardsContatos div span {
+  font-family: "padrao";
+  font-size: 80%;
+  display: block;
+  text-indent: 36px;
+  /*
+  Deixando a inicial e o restante do nome na mesma Linha
+  */
+}
+#cardsContatos div span:first-child, #cardsContatos div span:nth-child(2) {
+  text-indent: 0px;
+  display: inline-block;
+  font-size: 100%;
+  margin-bottom: -5px;
+}
+#cardsContatos div span:first-child {
+  background-color: #f1a9a0;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  #cardsContatos {
+    display: block;
+  }
+
+  #tabelaContatos {
+    display: none;
+  }
+
+  #formularioContato {
+    width: 88%;
+  }
+  #formularioContato input [type=text] {
+    width: 250px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
